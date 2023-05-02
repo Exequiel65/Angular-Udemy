@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title:string = 'mi primera app de angular';
-  public counter:number = 10
+  
 }
