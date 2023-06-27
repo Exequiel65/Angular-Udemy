@@ -36,11 +36,13 @@ export class GifsService {
   }
 
   private loadLocalStorage():void{
-    if (!localStorage.getItem('history') || this._tagsHistory.length === 0) {
+    if (!localStorage.getItem('history')) {
+      console.log("no paso")
       return
     }
-
+    console.log("paso")
     this._tagsHistory = JSON.parse(localStorage.getItem('history')!);
+    if (this._tagsHistory.length === 0) return
     this.searchTag(this._tagsHistory[0])
   }
   public searchTag(tag: string):void{
